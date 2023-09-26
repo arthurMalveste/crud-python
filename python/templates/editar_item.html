@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Item</title>
+</head>
+<body>
+    <h1>Editar Item</h1>
+    <form method="POST" action="{{ url_for('editar_item', item_id=item.id) }}">
+        <label for="nome">Nome do Item:</label>
+        <input type="text" name="nome" id="nome" value="{{ item.nome }}" required>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+    <a href="{{ url_for('listar_itens') }}">Cancelar</a>
+</body>
+</html>
